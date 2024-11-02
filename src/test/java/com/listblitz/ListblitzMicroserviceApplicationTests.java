@@ -1,4 +1,4 @@
-package com.listblitz.listblitz_microservice;
+package com.listblitz;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
