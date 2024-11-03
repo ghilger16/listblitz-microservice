@@ -3,14 +3,14 @@ package com.listblitz.api.dto;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "categories")
-public class CategoryDto {
+@Table(name = "blitz_packs")
+public class BlitzPackDto {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @Column(nullable = false, unique = true)
-    private String name;
+    private String title;
 
     public Long getId() {
         return id;
@@ -20,11 +20,11 @@ public class CategoryDto {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getTitle() {
+        return title;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setTitle(String title) {
+        this.title = title;
     }
 }
