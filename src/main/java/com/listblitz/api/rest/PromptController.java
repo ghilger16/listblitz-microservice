@@ -21,11 +21,10 @@ public class PromptController {
         this.promptService = promptService;
     }
 
-    // Fetch prompts in batches
-    @GetMapping
-    public List<PromptDto> getPrompts(@RequestParam Long blitzPackId,
-                                      @RequestParam(defaultValue = "0") int offset,
-                                      @RequestParam(defaultValue = "10") int limit) {
-        return promptService.getPromptsForBlitzPack(blitzPackId, offset, limit);
+    @GetMapping("/random")
+    public List<PromptDto> getRandomPrompts(
+            @RequestParam Long blitzPackId,
+            @RequestParam(defaultValue = "10") int limit) {
+        return promptService.getRandomPrompts(blitzPackId, limit);
     }
 }
