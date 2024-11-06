@@ -21,7 +21,7 @@ public class PromptController {
         this.promptService = promptService;
     }
 
-    @GetMapping("/random")
+    @GetMapping
     public List<PromptDto> getRandomPrompts(
             @RequestParam Long blitzPackId,
             @RequestParam(defaultValue = "10") int limit) {
